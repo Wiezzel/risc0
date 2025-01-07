@@ -49,5 +49,5 @@ impl BuildGuest {
 
 pub(crate) fn build(manifest_path: &Path, guest_options: &GuestOptions) -> Result<BuildStatus> {
     let src_dir = std::env::current_dir().unwrap();
-    risc0_build::docker_build(manifest_path, &src_dir, guest_options)
+    risc0_build::docker_build(manifest_path, &src_dir, &[], guest_options)
 }
